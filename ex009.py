@@ -8,12 +8,11 @@ jogador = {}
 nome = str(input('Nome do jogador: '))
 partidas = int(input('Quantidade de partidas: '))
 
-total = 0
 for i in range(partidas):
     gol = int(input(f'Quantos gols ele fez na partida {i+1}? '))
-    total += gol
     gols.append(gol)
-    
+total = sum(gols) # Faz a soma de todos os valores 
+
 jogador['nome'] = nome
 jogador['partidas'] = partidas
 jogador['gols'] = gols
